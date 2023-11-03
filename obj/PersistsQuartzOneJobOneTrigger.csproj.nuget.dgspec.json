@@ -1,0 +1,93 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\SDD-USER\\Documents\\dotnet-quartz\\PersistsQuartzOneJobOneTrigger\\PersistsQuartzOneJobOneTrigger.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\SDD-USER\\Documents\\dotnet-quartz\\PersistsQuartzOneJobOneTrigger\\PersistsQuartzOneJobOneTrigger.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SDD-USER\\Documents\\dotnet-quartz\\PersistsQuartzOneJobOneTrigger\\PersistsQuartzOneJobOneTrigger.csproj",
+        "projectName": "PersistsQuartzOneJobOneTrigger",
+        "projectPath": "C:\\Users\\SDD-USER\\Documents\\dotnet-quartz\\PersistsQuartzOneJobOneTrigger\\PersistsQuartzOneJobOneTrigger.csproj",
+        "packagesPath": "C:\\Users\\SDD-USER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SDD-USER\\Documents\\dotnet-quartz\\PersistsQuartzOneJobOneTrigger\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SDD-USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.2, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Quartz": {
+              "target": "Package",
+              "version": "[3.7.0, )"
+            },
+            "Quartz.Plugins": {
+              "target": "Package",
+              "version": "[3.7.0, )"
+            },
+            "Quartz.Serialization.Json": {
+              "target": "Package",
+              "version": "[3.7.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
