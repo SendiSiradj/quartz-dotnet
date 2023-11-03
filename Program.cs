@@ -3,14 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Quartz;
 using Quartz.Impl;
 
-public class SimpleJob : IJob
-{
-    public Task Execute(IJobExecutionContext context)
-    {
-        Console.WriteLine($"Job executed at: {DateTime.Now}");
-        return Task.CompletedTask;
-    }
-}
+namespace QuartzConsoleJob;
 
 public class Program
 {
@@ -40,27 +33,9 @@ public class Program
         IScheduler scheduler = await factory.GetScheduler();
         await scheduler.Start();
 
-        JobKey jobKey = new JobKey("notASmpleJob", "group1");
+        MyApp myApp = new MyApp(scheduler);
+        await myApp.RunAsync();
 
-        //sebuah trigger itu spesifik ke job, jika trigger sudah terdaftar untuk suatu job, tidak bisa pakai trigger yang sama utk job lain
-
-        if (!await scheduler.CheckExists(jobKey))
-        {
-            IJobDetail job = JobBuilder.Create<SimpleJob>()
-                .WithIdentity(jobKey)
-                .Build();
-
-            ITrigger trigger = TriggerBuilder.Create()
-                .WithIdentity("notASimpleTrigger", "group1")
-                .StartAt(DateBuilder.FutureDate(2, IntervalUnit.Second))
-                .WithSimpleSchedule(x => x
-                                    .WithIntervalInSeconds(10)
-                                    .RepeatForever())
-                                    .Build();
-
-            await scheduler.ScheduleJob(job, trigger);
-
-        }
 
         Console.WriteLine("Press any key to shutdwon...");
         Console.ReadKey();
